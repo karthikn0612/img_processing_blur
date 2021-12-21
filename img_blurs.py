@@ -1,0 +1,11 @@
+import cv2
+img=cv2.imread("coins.jpg")
+avg_blur=cv2.blur(img,(11,11))
+gaussian_blur=cv2.GaussianBlur(img,(9,9),20)
+median=cv2.medianBlur(img,5)
+cv2.imshow("AVERAGING",avg_blur)
+cv2.waitKey(0)
+cv2.imshow("GAUSSIAN BLUR",gaussian_blur)
+cv2.waitKey(0)
+cv2.imshow("MEDIAN BLUR",median)
+cv2.waitKey(0)
